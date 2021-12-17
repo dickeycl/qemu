@@ -1,5 +1,14 @@
 #!/usr/bin/python3
 
+#
+# Read qemu trace output to create a report of snapshot or migrate time.
+# Trace items which should be enabled are:
+#   savevm_section_start
+#   savevm_section_end
+#   ram_pages_saved
+#   qemu_file_fclose
+#
+
 import re
 import sys
 
