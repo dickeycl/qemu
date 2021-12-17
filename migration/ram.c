@@ -3102,6 +3102,7 @@ out:
         return ret;
     }
 
+    trace_ram_pages_saved(rs->target_page_count);
     return done;
 }
 
