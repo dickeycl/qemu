@@ -28,6 +28,8 @@ for line in map(str.rstrip, sys.stdin):
             m2 = savevm_section_start_pat.match(message)
             if pages == 0:
                 start_time = time
+                ram_time = time
+                last_section_time = time
             if m2:
                 if m2[1] != 'ram':
                     ram_time = time
