@@ -3,8 +3,7 @@
 # 
 # Script to measure delta save speed during a migration.
 #
-# This script, qqs starts the "source." At the same time, more or less, the
-# script qqd must be run to start the "destination."
+# This times one migration.
 #
 # The workload, SRC_IMAGE,provided by Moshik Hershcovitz, is a 5-minute long
 # python task.
@@ -59,6 +58,8 @@ function qgs() {
     echo quit
   } | nc -U "$SOCKET"
 } 2>&1 > /dev/tty
+
+set -eu
 
 HOME=/home/clem
 # uses scripts/monprocess.py from the QEMU source
